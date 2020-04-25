@@ -1,32 +1,20 @@
 org	100h
+mov	ax, 4d
+mov	si, 0d
+mov	bx, 2d
 
-mov	ax, 5d
-add	ax, 9d
-add	ax, 8d
-add     ax, 1d
-add	ax, 7d
-mov 	bx, 5d
-div	bx
+lp1: mov	[si + 210h], ax
+mul	bx
+inc	si
+cmp	ax, 100h
+jb	lp1
 
-mov 	cl, "P"
-mov	[200h], cl
-mov 	cl, "e"
-mov	[201h], cl
-mov 	cl, "o"
-mov	[202h], cl
-mov 	cl, "r"
-mov	[203h], cl
-mov 	cl, "e"
-mov	[204h], cl
-mov 	cl, "s"
-mov	[205h], cl
-mov 	cl, "n"
-mov	[206h], cl
-mov 	cl, "a"
-mov	[207h], cl
-mov 	cl, "d"
-mov	[208h], cl
-mov 	cl, "a"
-mov	[209h], cl
+lp2: mov	[si + 210h], ax
+mul	bx	
+inc 	si
+inc	si
+cmp	ax, 2000h
+jb	lp2
 
 int	20h
+
