@@ -1,5 +1,4 @@
-;Ejercicio 1
-/*org	100h
+org	100h ;ejercicio 1
 mov	ax, 5d
 add	ax, 9d
 add	ax, 8d
@@ -29,11 +28,9 @@ mov	[208h], cl
 mov 	cl, "a"
 mov	[209h], cl
 
-int	20h*/
 
-;Ejercicio 2
-/*org	100h
-mov	ax, 4d
+
+mov	ax, 4d ; ejercicio 2
 mov	si, 0d
 mov 	bx, 2d
 
@@ -51,11 +48,9 @@ cmp	AX, 2000h
 jb	lp2
 
 
-int	20h*/
 
-;Ejercicio 3
-/*org	100h
-mov	ax, 0d
+
+mov	ax, 0d ;ejercicio 3
 mov	bx, 1d
 mov	cx, 0d
 mov	si, 0h
@@ -78,4 +73,4 @@ cmp	si, 10h
 jb	loop2
 
 
-int	20h*/
+int	20h
